@@ -13,7 +13,7 @@ const VolunteerForm = () => {
   const year = today.getFullYear();
   const month = today.getMonth();
   const [monthIndex, setMonthIndex] = useState(month + 1);
-  const sundays = getSundaysInMonth(year, month);
+  const sundays = getSundaysInMonth(year, monthIndex - 1);
   const [team, setTeam] = useState("");
   const [formInputs, setFormInputs] = useState(
     sundays.reduce((acc, _, idx) => {
