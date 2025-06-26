@@ -59,7 +59,7 @@ const VolunteerForm = () => {
       inputs.schedule[sundayKey] = people;
     });
     try {
-      const response = await fetch(`${server}/create_volunteer`, {
+      const response = await fetch(`/api/create_volunteer`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

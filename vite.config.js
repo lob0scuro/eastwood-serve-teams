@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 
 const dev = false;
 
-const URL = dev ? "http://127.0.0.1:5000" : "http://104.200.20.211:8000";
+const URL = dev ? "http://127.0.0.1:5000" : "https://epcteams.com:8000";
 
 // https://vite.dev/config/
 export default defineConfig({
