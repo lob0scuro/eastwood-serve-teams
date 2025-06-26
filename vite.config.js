@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 
-const dev = true;
+const dev = false;
 
 const URL = dev ? "http://127.0.0.1:5000" : "http://104.200.20.211:8000";
 
