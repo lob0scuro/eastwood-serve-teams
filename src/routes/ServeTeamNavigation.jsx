@@ -1,0 +1,21 @@
+import { Link } from "react-router-dom";
+import styles from "./ServeTeamNavigation.module.css";
+import { ServeTeams } from "../utils/tools";
+
+const ServeTeamNavigation = () => {
+  return (
+    <>
+      <h1 className={styles.indexHeader}>Serve Team Schedules</h1>
+      <div className={styles.teamLinks}>
+        <Link>View All</Link>
+        {ServeTeams.map(({ key, value }) => (
+          <Link key={key} to={`/team/${key}`}>
+            {value}
+          </Link>
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default ServeTeamNavigation;

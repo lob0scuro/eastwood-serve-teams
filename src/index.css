@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --black: #170f0f;
+  --blue: #55637e;
+  --brown: #91887d;
+  --white: #e7e8e9;
+  --gold: #e8d4b8;
+  --deepGold: #c6995b;
+
+  --mainFont: "Bitter", serif;
+  --secondaryFont: "Cardo", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  gap: 8px;
+}
+.logo-container nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.logo-container nav a {
+  text-decoration: none;
+  color: var(--brown);
+  font-size: 18px;
+  font-weight: 600;
+}
+.logo-container nav a.active {
+  text-decoration: underline;
+}
+
+img.logo {
+  width: 10rem;
+  margin: 1rem 0;
+}
+
+button {
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #000;
+}
+
+input[type="text"] {
+  height: 32px;
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 2px 6px;
+}
+
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  min-width: 100svw;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-family: var(--mainFont);
+  color: var(--black);
+  max-width: 550px;
+  margin: 0 auto;
+}

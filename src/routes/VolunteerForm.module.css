@@ -1,0 +1,98 @@
+.formHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.formHeader p {
+  width: 60%;
+  text-align: center;
+}
+
+input,
+select {
+  background-color: var(--white);
+  color: var(--black);
+  border: none;
+  border-radius: 8px;
+  padding: 2px 4px;
+  font-size: 20px;
+}
+
+form.volunteerForm {
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.selectBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.selectBlock label {
+  font-size: 24px;
+  font-weight: 700;
+}
+.selectBlock select {
+  height: 52px;
+  font-size: 24px;
+  width: 130%;
+  text-align: center;
+}
+
+.inputBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.sundayBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.sundayBlock h4 {
+  color: var(--blue);
+}
+
+.inputRow {
+  display: flex;
+  gap: 8px;
+}
+
+.delButton {
+  background-color: rgb(202, 14, 14);
+  color: var(--white);
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 2px 3px 6px black;
+}
+
+.addButton {
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 3px 6px black;
+  height: 28px;
+  font-size: 16px;
+}
+
+form.volunteerForm button[type="submit"] {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem 1.8rem;
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: 18px;
+  margin-top: 2rem;
+  box-shadow: -2px 4px 10px black;
+}
