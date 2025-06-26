@@ -5,7 +5,7 @@ import { formatDate, getSundaysInMonth } from "../utils/tools";
 import clsx from "clsx";
 import { useNavigate } from "react-router-dom";
 import Monther from "../components/Monther";
-import server from "../utils/API";
+import { server } from "../utils/API";
 
 const VolunteerForm = () => {
   const today = new Date();

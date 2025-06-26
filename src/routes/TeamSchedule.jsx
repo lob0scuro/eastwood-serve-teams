@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { ServeTeams } from "../utils/tools";
 import Schedule from "../components/Schedule";
 import Monther from "../components/Monther";
-import server from "../utils/API";
+import { server } from "../utils/API";
 
 const TeamSchedule = () => {
   const { team } = useParams();
