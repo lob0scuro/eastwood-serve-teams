@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { ServeTeams } from "../utils/tools";
 import Schedule from "../components/Schedule";
 import Monther from "../components/Monther";
+import server from "../utils/API";
 
 const TeamSchedule = () => {
   const { team } = useParams();
@@ -17,7 +18,7 @@ const TeamSchedule = () => {
     const getVolunteers = async () => {
       try {
         const response = await fetch(
-          `/api/get_team_volunteers/${team}/${monthIndex}`
+          `${server}/get_team_volunteers/${team}/${monthIndex}`
         );
         const data = await response.json();
         if (!response.ok) {

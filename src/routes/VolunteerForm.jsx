@@ -5,6 +5,7 @@ import { formatDate, getSundaysInMonth } from "../utils/tools";
 import clsx from "clsx";
 import { useNavigate } from "react-router-dom";
 import Monther from "../components/Monther";
+import server from "../utils/API";
 
 const VolunteerForm = () => {
   const today = new Date();
@@ -58,7 +59,7 @@ const VolunteerForm = () => {
       inputs.schedule[sundayKey] = people;
     });
     try {
-      const response = await fetch("/api/create_volunteer", {
+      const response = await fetch(`${server}/create_volunteer`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
