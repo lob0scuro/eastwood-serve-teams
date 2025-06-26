@@ -61,6 +61,7 @@ const VolunteerForm = () => {
     try {
       const response = await fetch(`${server}/create_volunteer`, {
         method: "POST",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },

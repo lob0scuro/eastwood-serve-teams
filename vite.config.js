@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 
-const dev = false;
+const dev = true;
 
 const URL = dev ? "http://127.0.0.1:5000" : "https://api.epcteams.com";
 

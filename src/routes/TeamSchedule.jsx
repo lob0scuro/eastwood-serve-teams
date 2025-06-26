@@ -18,7 +18,10 @@ const TeamSchedule = () => {
     const getVolunteers = async () => {
       try {
         const response = await fetch(
-          `${server}/get_team_volunteers/${team}/${monthIndex}`
+          `${server}/get_team_volunteers/${team}/${monthIndex}`,
+          {
+            credentials: "include",
+          }
         );
         const data = await response.json();
         if (!response.ok) {

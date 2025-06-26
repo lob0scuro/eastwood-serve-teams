@@ -13,6 +13,7 @@ export const UserContext = ({ children }) => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify({ code }),
       });
       const data = await response.json();
@@ -28,9 +29,12 @@ export const UserContext = ({ children }) => {
   };
 
   const logout = async () => {
-    const response = await fetch(`${server}/logout`);
+    const response = await fetch(`${server}/logout`, {
+      credentials: "include",
+    });
     const data = await response.json();
     if (response.ok) {
+      setAuthenticated(false);
       return { success: true, message: data.message };
     } else {
       return { success: false };
