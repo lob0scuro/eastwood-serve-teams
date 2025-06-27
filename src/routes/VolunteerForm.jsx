@@ -72,7 +72,7 @@ const VolunteerForm = () => {
         throw new Error(data.error);
       }
       alert(data.message);
-      navigate("/serve-team-index");
+      navigate("/");
     } catch (error) {
       alert(error.message);
       console.error(error);

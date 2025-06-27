@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     const requestAccess = await login(accessCode);
     if (requestAccess.success) {
-      navigate("/");
+      navigate("/add-volunteer");
     } else {
       alert(requestAccess.error);
     }

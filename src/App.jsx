@@ -17,10 +17,10 @@ const App = () => {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route element={<ProtectedLayout />}>
-          <Route index element={<VolunteerForm />} />
-          <Route path="serve-team-index" element={<ServeTeamNavigation />} />
-          <Route path="team/:team" element={<TeamSchedule />} />
+          <Route path="/add-volunteer" element={<VolunteerForm />} />
         </Route>
+        <Route index element={<ServeTeamNavigation />} />
+        <Route path="team/:team" element={<TeamSchedule />} />
         <Route path="login" element={<Login />} />
       </Route>
     )

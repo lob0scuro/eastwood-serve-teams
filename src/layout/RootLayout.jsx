@@ -10,12 +10,14 @@ const RootLayout = () => {
     <>
       <div className="logo-container">
         <img src={Logo} alt="eastwood logo" className="logo" />
-        {authenticated && (
-          <nav>
-            <NavLink to="/">Add Volunteers</NavLink>
-            <NavLink to="/serve-team-index">Schedules</NavLink>
-          </nav>
-        )}
+        <nav>
+          {authenticated ? (
+            <NavLink to="/add-volunteer">Add Volunteers</NavLink>
+          ) : (
+            <NavLink to="/login">Add Volunteer</NavLink>
+          )}
+          <NavLink to="/">Schedules</NavLink>
+        </nav>
       </div>
       <Outlet />
     </>
