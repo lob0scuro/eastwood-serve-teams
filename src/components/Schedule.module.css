@@ -23,7 +23,6 @@
   padding: 3px 18px;
   align-self: start;
   border-radius: 5px 5px 0 0;
-  /* border-bottom: 3px solid var(--blue); */
 }
 
 .nameBlock {
@@ -43,4 +42,13 @@
 .nameBlock p {
   font-size: 18px;
   padding: 2px;
+  cursor: pointer;
+}
+
+p.volunteer {
+  text-decoration: underline;
+}
+
+p.volunteer:active {
+  color: var(--gold);
 }
