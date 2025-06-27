@@ -1,4 +1,4 @@
 const prod = true;
 export const server = prod
-  ? "https://api.epcteams.com"
+  ? "https://epcteams.com/api"
   : "http://localhost:5000";

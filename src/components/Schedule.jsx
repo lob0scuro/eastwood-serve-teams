@@ -24,7 +24,10 @@ const Schedule = ({ volunteers }) => {
             <div className={styles.nameBlock}>
               {volunteersForThisWeek.length > 0 ? (
                 volunteersForThisWeek.map((person) => (
-                  <p key={person.id}>{person.name}</p>
+                  <p key={person.id}>
+                    {person.position ? `${person.position}:` : null}
+                    {person.name}
+                  </p>
                 ))
               ) : (
                 <p>none</p>
