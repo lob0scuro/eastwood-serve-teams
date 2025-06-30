@@ -1,5 +1,5 @@
 import styles from "../components/Schedule.module.css";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ServeTeams } from "../utils/tools";
 import Schedule from "../components/Schedule";

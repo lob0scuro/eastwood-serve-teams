@@ -10,6 +10,7 @@ import ProtectedLayout from "./layout/ProtectedLayout";
 import VolunteerForm from "./routes/VolunteerForm";
 import ServeTeamNavigation from "./routes/ServeTeamNavigation";
 import TeamSchedule from "./routes/TeamSchedule";
+import AllTeamsSchedule from "./routes/AllTeamsSchedule";
 import Login from "./routes/Login";
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         </Route>
         <Route index element={<ServeTeamNavigation />} />
         <Route path="team/:team" element={<TeamSchedule />} />
+        <Route path="all-teams" element={<AllTeamsSchedule />} />
         <Route path="login" element={<Login />} />
       </Route>
     )

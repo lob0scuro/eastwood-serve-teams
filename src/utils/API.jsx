@@ -1,4 +1,4 @@
-const prod = true;
+const prod = false;
 export const server = prod
   ? "https://epcteams.com/api"
   : "http://localhost:5000";
@@ -17,6 +17,29 @@ export const deleteVolunteer = async (id) => {
       throw new Error(data.error);
     }
     return { success: true, message: data.message };
+  } catch (error) {
+    console.error(error);
+    return { success: false, error: error.message };
+  }
+};
+
+export const getAllServeTeams = async (month) => {
+  try {
+    const response = await fetch(
+      `${server}/get_all_volunteers_by_month/${month}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      }
+    );
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.error);
+    }
+    return { success: true, serveTeams: data.data };
   } catch (error) {
     console.error(error);
     return { success: false, error: error.message };
