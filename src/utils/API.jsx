@@ -1,4 +1,4 @@
-const prod = true;
+const prod = true; // Set to true for production, false for development
 export const server = prod
   ? "https://epcteams.com/api"
   : "http://localhost:5000";

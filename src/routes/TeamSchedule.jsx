@@ -42,7 +42,7 @@ const TeamSchedule = () => {
     <>
       <Monther monthIndex={monthIndex} setMonthIndex={setMonthIndex} />
       <h1 className={styles.scheduleHeader}>{teamName}</h1>
-      <Schedule volunteers={volunteers} />
+      <Schedule volunteers={volunteers} monthIndex={monthIndex} />
     </>
   );
 };

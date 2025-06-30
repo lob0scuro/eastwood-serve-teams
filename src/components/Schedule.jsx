@@ -1,16 +1,16 @@
 import styles from "./Schedule.module.css";
-import React from "react";
+import React, { useState } from "react";
 import { getSundaysInMonth, formatDate } from "../utils/tools";
 import { deleteVolunteer } from "../utils/API";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/UserContext";
+import Monther from "./Monther";
 
-const Schedule = ({ volunteers }) => {
+const Schedule = ({ volunteers, monthIndex }) => {
   const { authenticated } = useAuth();
   const date = new Date();
   const year = date.getFullYear();
-  const month = date.getMonth();
-  const sundays = getSundaysInMonth(year, month);
+  const sundays = getSundaysInMonth(year, monthIndex - 1);
   const navigate = useNavigate();
 
   const handleDelete = (id) => {
