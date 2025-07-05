@@ -111,7 +111,7 @@ const VolunteerForm = () => {
               <div key={index} className={styles.sundayBlock}>
                 <h4>{formatDate(dateObj)}</h4>
 
-                {formInputs[sundayKey].map((formInput, idx) => (
+                {formInputs[sundayKey]?.map((formInput, idx) => (
                   <div key={idx} className={styles.inputRow}>
                     <input
                       type="text"
