@@ -12,6 +12,8 @@ import ServeTeamNavigation from "./routes/ServeTeamNavigation";
 import TeamSchedule from "./routes/TeamSchedule";
 import AllTeamsSchedule from "./routes/AllTeamsSchedule";
 import Login from "./routes/Login";
+import Upload from "./routes/Upload";
+import Success from "./routes/Success";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -24,6 +26,8 @@ const App = () => {
         <Route path="team/:team" element={<TeamSchedule />} />
         <Route path="all-teams" element={<AllTeamsSchedule />} />
         <Route path="login" element={<Login />} />
+        <Route path="upload" element={<Upload />} />
+        <Route path="success" element={<Success />} />
       </Route>
     )
   );
