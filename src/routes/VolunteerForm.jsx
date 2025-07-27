@@ -1,5 +1,5 @@
 import styles from "./VolunteerForm.module.css";
-import React, { useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import Logo from "../assets/eastwood-logo.png";
 import { formatDate, getSundaysInMonth } from "../utils/tools";
 import clsx from "clsx";
@@ -12,15 +12,33 @@ const VolunteerForm = () => {
   const navigate = useNavigate();
   const year = today.getFullYear();
   const month = today.getMonth();
+  //
   const [monthIndex, setMonthIndex] = useState(month + 1);
-  const sundays = getSundaysInMonth(year, monthIndex - 1);
   const [team, setTeam] = useState("");
+  //
+  const sundays = useMemo(() => {
+    return getSundaysInMonth(year, monthIndex - 1);
+  }, [year, monthIndex]);
+  //
   const [formInputs, setFormInputs] = useState(
     sundays.reduce((acc, _, idx) => {
       acc[`sunday${idx}`] = [{ value: "" }];
       return acc;
     }, {})
   );
+
+  useEffect(() => {
+    setFormInputs((prev) => {
+      const updated = { ...prev };
+      sundays.forEach((_, index) => {
+        const key = `sunday${index}`;
+        if (!updated[key]) {
+          updated[key] = [{ value: "" }];
+        }
+      });
+      return updated;
+    });
+  }, [sundays]);
 
   const handleChange = (sundayKey, idx, e) => {
     const values = [...formInputs[sundayKey]];
